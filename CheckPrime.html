@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Testing all things JavaScript </title>
+	<script src="CheckPrime.js"></script>
+	
+</head>
+<body>
+
+<!-- This html page passes input to displayValue(), which passes the input to an external function to find a factor of the input, and then replaces the text in between the <p> tags with the result.  Note that the input does NOT have a 'name' attribute, but only an 'id' attribute.  The 'id' attribute is referenced by the button onclick, and the value of the input field is gotten therefrom.  -->
+Input your number </br>
+Number: <input type="text" maxlength="10" id="myinput" /></br>
+<button onclick="displayValue(document.getElementById('myinput').value)">Test:</button>
+<p id="robert">value</p>
+
+
+<script>
+
+function findAllFactors(val)
+{
+	var factors = new array();
+	var currentVal = val;
+	var x = findFactor(currentVal);
+}	
+
+function displayValue(val)
+{
+	var a = findFactor(val);
+	var b = val/a;
+	
+	document.getElementById("robert").innerHTML = val + " = " + a + " * " + b;
+}
+
+</script>
+</body>
+</html>
