@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> NumberWerks </title>
-	<script src="NumFuncs.js"></script>
-	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<title> Testing all things JavaScript </title>
+	<script src="CheckPrime.js"></script>
+	
 </head>
 <body>
 
@@ -12,7 +12,7 @@ Input your number </br>
 Number: <input type="number" maxlength="10" id="myinput" /></br>
 <button onclick="displayValue(document.getElementById('myinput').value)">Test:</button>
 
-<table id="results">
+<table>
 	<tr>
 		<td>Factorization:</td>
 		<td id="factors"></td>
