@@ -1,5 +1,26 @@
 #results {
-     color: red;
+     color: black;
      border-radius: 10px;
      border: 2px solid blue;
+}
+
+.result-titles {
+	color: black;
+	font-size: 20px;
+}
+
+.result-values {
+	color: black;
+	font-size: 60px;
+}
+
+td, tr {
+	border: 0px solid green;
+}
+
+input {
+	font-size: 50px;
+	border: 1px solid black;
+	border-radius: 5px;
+	align: center;
 }

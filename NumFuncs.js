@@ -38,7 +38,7 @@ function getAllFactors (num)
 
 function checkSquare (num)
 {
-     
+	    
 }
 
 function checkCube (num)

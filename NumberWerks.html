@@ -1,3 +1,5 @@
+<!-- This html page passes input to displayValue(), which passes the input to an external function to find a factor of the input, and then replaces the text in between the <p> tags with the result.  Note that the input does NOT have a 'name' attribute, but only an 'id' attribute.  The 'id' attribute is referenced by the button onclick, and the value of the input field is gotten therefrom.  -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,23 +9,26 @@
 </head>
 <body>
 
-<!-- This html page passes input to displayValue(), which passes the input to an external function to find a factor of the input, and then replaces the text in between the <p> tags with the result.  Note that the input does NOT have a 'name' attribute, but only an 'id' attribute.  The 'id' attribute is referenced by the button onclick, and the value of the input field is gotten therefrom.  -->
-Input your number </br>
-Number: <input type="number" maxlength="10" id="myinput" /></br>
-<button onclick="displayValue(document.getElementById('myinput').value)">Test:</button>
 
 <table id="results">
-	<tr>
-		<td>Factorization:</td>
-		<td id="factors"></td>
+	<tr> 
+		<td colspan="2" align="center"> Input Your Number </td>
 	</tr>
 	<tr>
-		<td>Square:</td>
-		<td id="square"></td>
+		<td> <input type="number" maxlength="10" id="myinput" /> </td>
+		<td> <button onclick="displayValue(document.getElementById('myinput').value)">Test:</button> </td>
 	</tr>
 	<tr>
-		<td>Cube:</td>
-		<td id="cube"></td>
+		<td class="result-titles">Factorization:</td>
+		<td class="result-values" id="factors"></td>
+	</tr>
+	<tr>
+		<td class="result-titles">Square:</td>
+		<td class="result-values" id="square"></td>
+	</tr>
+	<tr>
+		<td class="result-titles">Cube:</td>
+		<td class="result-values" id="cube"></td>
 	</tr>
 </table>
 
