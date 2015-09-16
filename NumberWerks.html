@@ -9,8 +9,7 @@
 </head>
 <body>
 
-
-<table id="results">
+<table class="centered-table" id="results">
 	<tr> 
 		<td colspan="2" align="center"> Input Your Number </td>
 	</tr>
@@ -18,20 +17,23 @@
 		<td> <input type="number" maxlength="10" id="myinput" /> </td>
 		<td> <button onclick="displayValue(document.getElementById('myinput').value)">Test:</button> </td>
 	</tr>
-	<tr>
-		<td class="result-titles">Factorization:</td>
-		<td class="result-values" id="factors"></td>
-	</tr>
-	<tr>
-		<td class="result-titles">Square:</td>
-		<td class="result-values" id="square"></td>
-	</tr>
-	<tr>
-		<td class="result-titles">Cube:</td>
-		<td class="result-values" id="cube"></td>
-	</tr>
+	<tr><td colspan="2">
+		<table>
+			<tr>
+				<td class="result-titles">Factorization:</td>
+				<td class="result-values" id="factors"></td>
+			</tr>
+			<tr>
+				<td class="result-titles">Square:</td>
+				<td class="result-values" id="square"></td>
+			</tr>
+			<tr>
+				<td class="result-titles">Cube:</td>
+				<td class="result-values" id="cube"></td>
+			</tr>
+		</table>
+	</td></tr>
 </table>
-
 
 <script>
 
@@ -39,6 +41,10 @@ function displayValue(val)
 {
 	var a = [];
 	a = getAllFactors(val);
+	if (a == 1)
+	{
+		a = "Prime"
+	}
 	
 	document.getElementById("factors").innerHTML = a;
 	document.getElementById("square").innerHTML = val*val;
