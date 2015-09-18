@@ -16,7 +16,7 @@ function findFactor (num)
                factor += 1;
           };
      };
-     if (factor == num) return "Prime"
+     if (factor == num) return 1
      else return factor;
 }
 
@@ -36,14 +36,48 @@ function getAllFactors (num)
 	return factors;
 }
 
-function checkSquare (num)
+function getSquareRoot (num)
 {
-	    
+	// first, exit the function if num=1
+	if ( num == 1 ) return 1;
+
+	// Next, step up the square ladder until currentSquare
+	// is either equal to or greater than num
+	//var root, currentSquare;
+	var root = 1;
+	var currentSquare = root*root;
+	while ( currentSquare < num ) 
+	{
+		root += 1;
+		currentSquare = root * root;
+	}
+
+	// now, currentSquare is either > or = to num
+	// if num is a square, this function returns its root
+	if ( currentSquare == num ) return root;
+	return 0;
 }
 
-function checkCube (num)
+function getCubeRoot (num)
 {
-     
+	// first, exit the function if num=1
+	if ( num == 1 ) return 1;
+
+	// Next, step up the cube ladder until currentCube
+	// is either equal to or greater than num
+	//var root, currentCube;
+	var root = 1;
+	var currentCube = root*root*root;
+	while ( currentCube < num ) 
+	{
+		root += 1;
+		currentCube = root * root * root;
+	}
+
+	// now, currentCube is either > or = to num
+	// if num is a cube, this function returns its root
+	if ( currentCube == num ) return root;
+	return 0;
 }
 
 function checkTriangle (num)

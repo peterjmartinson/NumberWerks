@@ -14,8 +14,12 @@
 		<td colspan="2" align="center"> Input Your Number </td>
 	</tr>
 	<tr>
-		<td> <input type="number" maxlength="10" id="myinput" /> </td>
-		<td> <button onclick="displayValue(document.getElementById('myinput').value)">Test:</button> </td>
+		<td>
+			<input type="number" maxlength="10" id="myinput" />
+		</td>
+		<td>
+			<button onclick="displayValue(document.getElementById('myinput').value)">Test:</button>
+		</td>
 	</tr>
 	<tr><td colspan="2">
 		<table>
@@ -31,6 +35,13 @@
 				<td class="result-titles">Cube:</td>
 				<td class="result-values" id="cube"></td>
 			</tr>
+			<tr>
+				<td class="result-titles">Square Root:</td>
+				<td class="result-values" id="square-root"></td>
+			</tr>
+			<tr>
+				<td class="result-titles">Cube Root:</td>
+				<td class-"result-values" id="cube-root"></td>
 		</table>
 	</td></tr>
 </table>
@@ -39,16 +50,41 @@
 
 function displayValue(val)
 {
+	// initialize the variables
+	//var squareRoot, cubeRoot;
 	var a = [];
+
+	// find the square root, if val is a square
+	var squareRoot = getSquareRoot(val);
+	if ( squareRoot != 0 )
+	{
+		document.getElementById("square-root").innerHTML = squareRoot;
+	} else
+	{
+		document.getElementById("square-root").innerHTML = "Not a Square";
+	};
+	
+	// find the cube root, if val is a cube
+	var cubeRoot = getCubeRoot(val);
+	if ( cubeRoot != 0 )
+	{
+		document.getElementById("cube-root").innerHTML = cubeRoot;
+	} else
+	{
+		document.getElementById("cube-root").innerHTML = "Not a Cube";
+	};
+
+	// find all factors of the input number (val)
 	a = getAllFactors(val);
 	if (a == 1)
 	{
 		a = "Prime"
-	}
+	};
 	
 	document.getElementById("factors").innerHTML = a;
 	document.getElementById("square").innerHTML = val*val;
 	document.getElementById("cube").innerHTML = val*val*val;
+
 }
 
 </script>
