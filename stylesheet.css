@@ -3,7 +3,7 @@ body {
 	height	: 100%;
 	font-family: Garamond, serif;
 	font-size: 20px;
-	background-color: black;
+	background-color: gray;
 }
 
 .centered-table {
@@ -12,10 +12,13 @@ body {
 	background-color	: white;
 }
 
-#results {
+#main-table {
      color: black;
      border-radius: 10px;
-     border: 0px;
+     border: 2px solid red;
+	 background-color: blue;
+	 width: 800px;
+	 height: 400px;
 }
 
 .result-titles {

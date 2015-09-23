@@ -8,21 +8,22 @@
 	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 </head>
 <body>
-
-<table class="centered-table" id="results">
-	<tr> 
-		<td colspan="2" align="center"> Input Your Number </td>
-	</tr>
-	<tr>
-		<td>
-			<input type="number" maxlength="10" id="myinput" />
-		</td>
-		<td>
-			<button onclick="displayValue(document.getElementById('myinput').value)">Test:</button>
-		</td>
-	</tr>
-	<tr><td colspan="2">
-		<table>
+<table class="centered-table" id="main-table">
+	<tr><td>
+		<table class="centered-table">
+			<tr> 
+				<td colspan="2" align="center"> Input Your Number </td>
+			</tr>
+			<tr>
+				<td>
+					<p><input type="number" maxlength="10" id="myinput" autofocus></p>
+				</td>
+				<td>
+					<button onclick="displayValue(document.getElementById('myinput').value)">Test:</button>
+				</td>
+			</tr>
+		</table>
+		<table class="centered-table">
 			<tr>
 				<td class="result-titles">Factorization:</td>
 				<td class="result-values" id="factors"></td>
@@ -45,7 +46,6 @@
 		</table>
 	</td></tr>
 </table>
-
 <script>
 
 function displayValue(val)
